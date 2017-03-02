@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>专题页面</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet/less" href="css/theme.less"/>
+    <script src="lib/less/less.js"></script>
+    <script src="lib/jquery/jquery-1.12.2.js"></script>
+    <script src="lib/temp/template-native.js"></script>
+    <script src="js/theme.js"></script>
+
+    <!--连载漫画的模板-->
+    <script type="text/temp" id="tempTheme">
+
+    <% for(var i = 0 ; i < items.length ; i++) {%>
+        <div class="theme-item">
+            <a href="<%=items[i].url%>">
+                <img src="<%=items[i].img%>"/>
+            </a>
+            <p class="theme-desc"><%=items[i].title%></p>
+        </div>
+    <% } %>
+    </script>
+</head>
+<body>
+    <header class="header-nav">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        专题页面
+    </header>
+    <section class="theme-list">
+        <!--<div class="theme-item">-->
+            <!--<a href="#">-->
+                <!--<img src="imgs/dn201503296002_670x419.jpg"/>-->
+            <!--</a>-->
+            <!--<p class="theme-desc">11111111111</p>-->
+        <!--</div>-->
+    </section>
+</body>
+</html>

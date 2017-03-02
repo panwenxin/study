@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>红旅漫画</title>
+    <link rel="stylesheet/less" href="css/index.less"/>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <script src="lib/less/less.js"></script>
+    <script src="lib/jquery/jquery-1.12.2.js"></script>
+    <script src="lib/temp/template-native.js"></script>
+
+    <!-- 轮播图的模板-->
+    <script type="text/temp" id="top-temp">
+        <% for(var i = 0 ; i < items.length ;i++) { %>
+            <div class="swiper-slide">
+                <a href="<%=items[i].url%>"><img src="<%=items[i].img%>" width="100%" alt=""/></a>
+                <p class="swiper-desc"><%=items[i].title%></p>
+            </div>
+        <% } %>
+    </script>
+    <!-- 漫画详情的列表-->
+    <script type="text/temp" id="cartoonItem">
+    <% for(var i = 0 ; i < cartoonItem.length ;i++) { %>
+        <div class="cartoon-item clearfix">
+                 <a href="<%=cartoonItem[i].url%>" class="cartoon-link"><img src="<%=cartoonItem[i].img%>" alt=""/><span class="status"><%=cartoonItem[i].update%></span></a>
+                 <p class="cartoon-title"><%=cartoonItem[i].name%></p>
+        </div>
+    <% } %>
+    </script>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+            <div id="sideBar">
+                <div class="side-logo"></div>
+                <ul class="list-group">
+                    <li class="list-group-item side-serialize">连载动漫--get <span class="glyphicon glyphicon-chevron-right"></span> </li>
+                    <li class="list-group-item side-theme">专题列表--get <span class="glyphicon glyphicon-chevron-right"></span></li>
+                    <li class="list-group-item side-aboutUs">关于 <span class="glyphicon glyphicon-chevron-right"></span> </li>
+                </ul>
+            </div>
+            <div id="main">
+                <div class="mask">
+                </div>
+                <header class="header-nav">
+                        <span class="glyphicon glyphicon-align-justify showList-Btn"></span>
+                        红旅漫画
+                        <span class="glyphicon glyphicon-search"></span>
+                </header>
+                <section class="swiper">
+                        <!-- Swiper -->
+                        <div class="swiper-container-top">
+                            <div class="swiper-wrapper">
+                                <!-- 为什么我的轮播图不能滑动-->
+
+                                <!--<div class="swiper-slide">-->
+                                <!--<img src="imgs/dn201503296002_670x419.jpg" width="100%" alt=""/>-->
+                                <!--<p class="swiper-desc">111111111</p>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                <!--<img src="imgs/dn201503296002_670x419.jpg" width="100%"  alt=""/>-->
+                                <!--<p class="swiper-desc">22222222</p>-->
+                                <!--</div>-->
+                                <!--<div class="swiper-slide">-->
+                                <!--<img src="imgs/dn201503296002_670x419.jpg" width="100%" alt=""/>-->
+                                <!--<p class="swiper-desc">3333</p>-->
+                                <!--</div>-->
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination-top"></div>
+                        </div>
+                        <!-- swiper的js文件-->
+                        <script src="lib/swiper/js/swiper.jquery.min.js"></script>
+                    </section>
+
+                <!-- 最新漫画区域-->
+
+                <section id="cartoon">
+                        <ul class="cartoon-nav clearfix">
+                            <li class="new-serialize">新增连载</li>
+                            <li class="new-end">新增完结</li>
+                            <li class="hot-serialize">推荐连载</li>
+                            <li class="hot-end">推荐完结</li>
+                        </ul>
+                        <section class="cartoon-list clearfix">
+                        </section>
+                    </section>
+
+                <script>
+                        var swiper = new Swiper('.swiper-container-top', {
+                            pagination: '.swiper-pagination-top',
+                            paginationClickable: true,
+//                            loop:true,
+                            autoplay:2000
+                        });
+                    </script>
+            </div>
+    </div>
+
+</body>
+</html>

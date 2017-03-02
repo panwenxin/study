@@ -1,0 +1,53 @@
+
+//头部
+
+.header-nav {
+  text-align: center;
+  height: 41px;
+  //line-height: 41px;
+  //font-size: 20px;
+  font: bold 16px/41px "Microsoft Yahei";
+  background-color: #c0c0c0;
+  position: relative;
+  >span{
+    line-height: 41px;
+    &:first-child {
+      position: absolute;
+      z-index: 6;
+      left: 10px;
+    }
+    &:last-child {
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+//连载的动漫列表
+
+
+.serialize-list {
+  >.media{
+    padding: 10px 10px;
+    >.media-left{
+      >a{
+        >.media-object{
+          width:90px;
+        }
+      }
+
+    }
+    >.media-body{
+      padding: 5px 0;
+      >.media-heading{
+        font-weight: bold;
+        font-size: 16px;
+      }
+      >p {
+        line-height: 20px;
+        font-size: 14px;
+        color:#c0c0c0;
+      }
+    }
+  }
+}

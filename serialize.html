@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>连载漫画</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>红旅漫画</title>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet/less" href="css/serialize.less"/>
+    <script src="lib/less/less.js"></script>
+    <script src="lib/jquery/jquery-1.12.2.js"></script>
+    <script src="lib/temp/template-native.js"></script>
+    <script src="js/serialize.js"></script>
+
+    <!--连载漫画的模板-->
+    <script type="text/temp" id="tempSerialize">
+
+    <% for(var i = 0 ; i < items.length ; i++) {%>
+        <div class="media">
+            <div class="media-left">
+                <a href="<%=items[i].url%>">
+                    <img class="media-object" src="<%=items[i].img%>">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><%=items[i].name%></h4>
+                <p><%=items[i].episode%></p>
+                <p><%=items[i].updateTime%></p>
+                <p>下载次数： <%=items[i].downloadCount%></p>
+            </div>
+        </div>
+    <% } %>
+
+    </script>
+</head>
+<body>
+    <header class="header-nav">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        连载动漫
+    </header>
+    <section class="serialize-list">
+        <!--<div class="media">-->
+            <!--<div class="media-left">-->
+                <!--<a href="#">-->
+                    <!--<img class="media-object" src="imgs/01.jpg">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="media-body">-->
+                <!--<h4 class="media-heading">11111</h4>-->
+                <!--<p>更新集数</p>-->
+                <!--<p>更新时间</p>-->
+                <!--<p>下载次数</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
+</body>
+</html>

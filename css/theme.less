@@ -1,0 +1,54 @@
+//顶部状态栏
+.header-nav {
+  text-align: center;
+  height: 41px;
+  //line-height: 41px;
+  //font-size: 20px;
+  font: bold 16px/41px "Microsoft Yahei";
+  background-color: #c0c0c0;
+  position: relative;
+  >span{
+    line-height: 41px;
+    &:first-child {
+      position: absolute;
+      z-index: 6;
+      left: 10px;
+    }
+    &:last-child {
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+//专题项
+
+
+.theme-list {
+  padding: 10px;
+  >.theme-item {
+    >a {
+      padding: 10px 0;
+      display: block;
+      text-align: center;
+      &:first-child{
+        padding-top: 0;
+      }
+      >img {
+        width: 100%;
+      }
+    }
+    >.theme-desc {
+      color: #c0c0c0;
+      font-size: 16px;
+      padding-bottom: 5px;
+    }
+    &:after {
+      content:"";
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #c0c0c0;
+      margin-bottom: 10px;
+    }
+  }
+}
